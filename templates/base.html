@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charser="utf-8">
+    <title>Chish</title>
+</head>
+
+<body>
+  <nav>
+      <a href="{{ get_url(path='@/_index.md') }}"><strong>HOME</strong></a>
+  <ul>
+    <li><a href="{{ get_url(path="@/blogs/_index.md") }}">blogs/</a></li>
+    <li><a href="{{ get_url(path="@/guides/_index.md") }}">guides/</a></li>
+    <li><a href="{{ get_url(path="@/projects/_index.md") }}">projects/</a></li>
+  </ul>
+  </nav>
+  <section>
+    {%block content %} {%endblock content%}
+  </section>
+</body>
