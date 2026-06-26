@@ -1,0 +1,10 @@
+# Ignore the compiled output directory (build artifacts)
+/public
+
+# Ignore Mac system files (if applicable)
+.DS_Store
+
+# Ignore local editor configurations (optional)
+.vscode/
+.idea/
+*.swp
