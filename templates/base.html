@@ -11,12 +11,19 @@
 
 <body>
   <nav>
+    <div class="nav-top">
       <a href="{{ get_url(path='@/_index.md') }}"><strong>HOME</strong></a>
-  <ul>
-    <li><a href="{{ get_url(path="@/blogs/_index.md") }}">blogs/</a></li>
-    <li><a href="{{ get_url(path="@/guides/_index.md") }}">guides/</a></li>
-    <li><a href="{{ get_url(path="@/projects/_index.md") }}">projects/</a></li>
-  </ul>
+      <ul>
+        <li><a href="{{ get_url(path="@/blogs/_index.md") }}">blogs/</a></li>
+        <li><a href="{{ get_url(path="@/guides/_index.md") }}">guides/</a></li>
+        <li><a href="{{ get_url(path="@/projects/_index.md") }}">projects/</a></li>
+      </ul>
+    </div>
+    <div class="nav-bottom">
+      <span class="prompt">~ $ whoami</span>
+      <span class="whoami">chish -- compsci ug</span>
+      <a href="{{ get_url(path='@/about.md') }}" class="nav-about-link">./about</a>
+    </div>
   </nav>
   <main>
     {%block content %} {%endblock content%}

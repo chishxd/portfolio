@@ -3,6 +3,9 @@
 
 {% block content %}
 <article>
+  {% if page.extra.profile_pic %}
+  <img src="{{ get_url(path=page.extra.profile_pic) }}" alt="{{ page.title }}" class="profile-pic-about">
+  {% endif %}
   <h1>{{page.title}}</h1>
 
   {{page.content | safe}}

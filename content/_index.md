@@ -11,4 +11,12 @@ Welcome to my personal website! I will be sharing things I have been working on,
 My interests lie mostly in Systems Programming, DevOps and backend, tho I can also do *some* frontend stuff too.
 Besides that, I love playing games, reading books and writing.
 
+**[About me →](@/about.md)**
 
+---
+
+## Quick Links
+
+[Github](https://github.com/chishxd)\
+[Codeberg](https://codeberg.org/chish)\
+[Last.fm](https://www.last.fm/user/ChishGG)

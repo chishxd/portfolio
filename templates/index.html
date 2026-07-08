@@ -1,5 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-  {{ section.content | safe }}
+<div class="intro">
+  <img src="{{ get_url(path='sans.jpg') }}" alt="Chish" class="profile-pic-main">
+  <div>
+    {{ section.content | safe }}
+  </div>
+</div>
+
+{% set blogs = get_section(path="blogs/_index.md") %}
+{% if blogs.pages %}
+<h2>Recent Posts</h2>
+<ul>
+{% for page in blogs.pages | slice(end=3) %}
+  <li>
+    <a href="{{ page.permalink }}">{{ page.title }}</a>
+    {% if page.date %}<small>{{ page.date }}</small>{% endif %}
+  </li>
+{% endfor %}
+</ul>
+{% endif %}
 {% endblock content %}
