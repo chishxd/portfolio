@@ -2,42 +2,86 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
   background-color: #333333;
   color: #c9d1d9;
-
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, "Liberation Mono", monospace;
-  font-size: 1.1rem;
-  line-height: 1.6;
-
+  font-size: 1rem;
+  line-height: 1.7;
   display: grid;
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: 200px 1fr;
   min-height: 100vh;
 }
 
 nav {
   background-color: #161b22;
   border-right: 1px solid #30363d;
-  padding: 3rem 2rem;
-
-  /* 1. Stick the navigation to the top of the viewport */
+  padding: 2rem 1.5rem;
   position: sticky;
   top: 0;
-  
-  /* 2. Explicitly lock the height to the visible viewport height */
   height: 100vh;
-  
-  /* 3. Safe-guard: If you ever add 50 links, allow the sidebar to scroll internally */
   overflow-y: auto;
 }
 
-main {
-  max-width: 800px;
+nav a {
+  color: #c9d1d9;
 }
 
-section{
+nav a:hover {
+  color: #58a6ff;
+}
+
+nav > a {
+  font-size: 1.1rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
+}
+
+nav li {
+  margin-bottom: 0.5rem;
+}
+
+nav li a {
+  color: #8b949e;
+}
+
+main {
   padding: 3rem;
+  max-width: 72ch;
+  overflow-wrap: break-word;
+}
+
+article {
+  max-width: 60ch;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin: 2rem 0 0.75rem;
+  color: #e6edf3;
+}
+
+h1 { font-size: 1.6rem; margin-top: 0; }
+h2 { font-size: 1.3rem; border-bottom: 1px solid #30363d; padding-bottom: 0.3rem; }
+h3 { font-size: 1.1rem; }
+h4 { font-size: 1rem; }
+
+p {
+  margin: 0 0 1rem;
+}
+
+ul, ol {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.3rem;
 }
 
 a {
@@ -46,59 +90,111 @@ a {
 }
 
 a:visited {
-  color: #ab9df2;}
+  color: #ab9df2;
+}
 
 a:hover {
   text-decoration: underline;
 }
 
-nav ul {
-  list-style-type: none;
+strong {
+  color: #e6edf3;
+}
+
+small {
+  color: #8b949e;
+  font-size: 0.85rem;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, "Liberation Mono", monospace;
+  background-color: #252525;
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+
+pre {
+  background-color: #252525;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.5;
+  margin: 0 0 1rem;
+}
+
+pre code {
+  background: none;
   padding: 0;
-  margin: 1.5rem 0 0 0; 
+  border-radius: 0;
+  font-size: 0.85rem;
 }
 
-nav li {
-  margin-bottom: 0.8rem; 
+blockquote {
+  margin: 0 0 1rem;
+  padding: 0 0 0 1rem;
+  border-left: 3px solid #30363d;
+  color: #8b949e;
 }
 
-@media (max-width: 1024px) {
+hr {
+  border: none;
+  border-top: 1px solid #30363d;
+  margin: 2rem 0;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 0 1rem;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #30363d;
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+}
+
+th {
+  background-color: #252525;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
   body {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-
-    font-size: 0.95rem; 
+    font-size: 0.95rem;
   }
 
   nav {
     border-right: none;
     border-bottom: 1px solid #30363d;
-    padding: 1.5rem;
-    
+    padding: 1rem 1.5rem;
     position: static;
     height: auto;
-
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 2rem; 
+    gap: 1.5rem;
   }
 
   nav ul {
     display: flex;
-    flex-direction: row;
     gap: 1.5rem;
     margin: 0;
-    padding: 0;
   }
 
   nav li {
     margin-bottom: 0;
   }
 
-  section {
-    padding: 2rem 1.5rem; 
+  main {
+    padding: 1.5rem;
   }
 }
-
-
