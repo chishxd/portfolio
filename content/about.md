@@ -21,7 +21,7 @@ I am talking about Outer Wilds here, not a weird interpretation of Valorant teac
 
 ## The Tech Stack I know
 
-**Languages**\ 
+**Languages**\
 Rust, Zig, Golang, Java, Python, Gdscript
 
 **Frameworks || Libraries**\
