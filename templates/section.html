@@ -6,9 +6,24 @@
   {{section.content | safe}}
 
   <ul>
+  {% for project_path in section.subsections %}
+    {% set project = get_section(path=project_path) %}
+    <li>
+      <a href="{{project.permalink}}">{{project.title}}</a>
+      {% if project.description %}
+        <p>{{project.description}}</p>
+      {% endif %}
+      {% if project.date %}
+        <small>{{ project.date | date(format="%Y-%m-%d") }}</small>
+      {% endif %}
+  </li>
+  {% endfor %}
   {% for page in section.pages %}
     <li>
       <a href="{{page.permalink}}">{{page.title}}</a>
+      {% if page.date %}
+        <small>{{ page.date | date(format="%Y-%m-%d") }}</small>
+      {% endif %}
   </li>
   {% endfor %}
   </ul>

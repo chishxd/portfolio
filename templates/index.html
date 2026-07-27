@@ -8,6 +8,23 @@
   </div>
 </div>
 
+{% set projects = get_section(path="projects/_index.md") %}
+{% if projects.subsections %}
+<h2>Projects</h2>
+<ul>
+{% for project_path in projects.subsections %}
+  {% set project = get_section(path=project_path) %}
+  <li>
+    <a href="{{ project.permalink }}">{{ project.title }}</a>
+    {% if project.description %}<p style="color: #999; margin: .2rem 0 0;">{{ project.description }}</p>{% endif %}
+  </li>
+{% endfor %}
+</ul>
+<p><a href="{{ projects.permalink }}">see more &rarr;</a></p>
+{% endif %}
+
+<hr>
+
 {% set blogs = get_section(path="blogs/_index.md") %}
 {% if blogs.pages %}
 <h2>Recent Posts</h2>
@@ -19,5 +36,6 @@
   </li>
 {% endfor %}
 </ul>
+<p><a href="{{ blogs.permalink }}">see more &rarr;</a></p>
 {% endif %}
 {% endblock content %}

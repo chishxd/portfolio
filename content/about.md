@@ -15,7 +15,7 @@ maybe I will rewrite it in Typescript or Rust in future, Who Knows ¯\\_(ツ)_/�
 ## Some Facts About Myself
 1. I could not afford a laptop so I got a portable SSD, installed Linux on it and used to plug it in college PCs to get work done
 2. Self Hosting a minecraft server made me so happy that it led me down a rabbit hole so deep that I ended up learning CI/CD in Woodpecker
-3. I love game ALOT, I don't see them as jst a source of entertainment, but a piece of art which can convey deeper meanings and teach brilliant things.
+3. I love games ALOT, I don't see them as jst a source of entertainment, but a piece of art which can convey deeper meanings and teach brilliant things.
 I am talking about Outer Wilds here, not a weird interpretation of Valorant teaching team work btw.
 4. I am very bad at CSS
 
@@ -32,6 +32,6 @@ Actix, FastAPI, std/http(golang peak)
 ## Contact
 
 guthib - <https://github.com/chishxd> \
-mail - <mailto:chishxd@gmail.com> (yeah I need a custom domain 🥀)
+mail - <mailto:me@chishxd.xyz> (yeah I have a custom domain now) \
 discord - chishxd
 
