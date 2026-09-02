@@ -116,10 +116,12 @@ pre {
   background: #222;
   padding: 1rem;
   overflow-x: auto;
-  white-space: pre-wrap;
-  word-break: break-word;
+  white-space: pre;
   line-height: 1.5;
   margin: 0 0 1rem;
+  box-sizing: border-box;
+  width: calc(100vw - 14.5rem - 2rem);   /* 12rem nav + 2.5rem main padding, minus 2rem breathing room on the right */
+  max-width: calc(100vw - 14.5rem - 2rem);
 }
 
 pre code {
@@ -220,6 +222,11 @@ article { max-width: 44rem; }
   .profile-pic-main {
     width: 6rem;
     height: 6rem;
+  }
+
+  pre {
+    width: 100%;
+    max-width: 100%;
   }
   main { padding: 1rem; }
 }

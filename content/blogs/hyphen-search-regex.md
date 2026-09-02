@@ -7,6 +7,8 @@ So Sphinx's search was doing this annoying thing where searching for `-v`
 or `--force` just... returned nothing. Even in docs that literally have
 those exact flags written out.
 
+![Sphinx search issue](/static/screenshots/sphinx-search-issue.png)
+
 My first instinct was to go poke the JS search code since, well, that's
 what actually runs the query right. But that's only treating the symptom
 lol, by the time a query even reaches the JS side, the index has ALREADY
