@@ -117,7 +117,7 @@ nav li a:hover {
 /* Main Content Area */
 main {
   padding: 3rem 2.5rem;
-  max-width: 50rem;
+  max-width: 68rem;
   min-width: 0; /* Prevents grid column expansion from children */
   width: 100%;
 }
