@@ -8,8 +8,6 @@ So Sphinx's search was doing this annoying thing where searching for `-v`
 or `--force` just... returned nothing. Even in docs that literally have
 those exact flags written out.
 
-![Sphinx search issue](/screenshots/sphinx-search-issue.png)
-
 ### The Mystery: Python Indexer vs JavaScript Search
 
 My first instinct was to go poke the JS search code since, well, that's

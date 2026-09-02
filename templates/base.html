@@ -20,20 +20,7 @@
   <ul style="padding-left: 0; list-style: none;">
     <li><a href="{{ get_url(path='@/blogs/_index.md') }}">blogs/</a></li>
     <li><a href="{{ get_url(path='@/guides/_index.md') }}">guides/</a></li>
-    <li>
-      <a href="{{ get_url(path='@/projects/_index.md') }}">projects/</a>
-      
-      <!-- Sub-links: Smaller font (0.8rem) and tight indent to prevent overflow -->
-      <ul style="padding-left: 0.8rem; border-left: 1px solid #2a2a2a; margin-top: 0.4rem; font-size: 0.8rem; list-style: none;">
-        {% set projects_sect = get_section(path="projects/_index.md") %}
-        {% for project_path in projects_sect.subsections %}
-          {% set project = get_section(path=project_path) %}
-          <li>
-            <a href="{{ project.permalink }}" style="color: #666;">{{ project.title }}/</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </li>
+    <li><a href="{{ get_url(path='@/projects/_index.md') }}">projects/</a></li>
   </ul>
 
   <div class="nav-bottom">
