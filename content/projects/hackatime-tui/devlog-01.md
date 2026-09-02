@@ -1,17 +1,22 @@
 +++
 title = "Devlog 01: Shared Types First"
 date = 2026-09-01
+description = "Day 1 of building the Hackatime TUI in Go: setting up shared types, designing the btop-style layout wireframe, and unblocking the team."
 +++
 
 Okay so, first real day on the Hackatime TUI. 3 person team, Bubbletea for the
 TUI part, one guy on backend wiring, one guy on widgets, and me doing
 dashboard/nav stuff.
 
+### Unblocking the Team First
+
 First thing I did was just... define the shared types. Dashboard, Filters,
 the whole shape of the panel data. Didn't touch any actual logic before this,
 cuz both backend guy and widget guy are kinda stuck until they know what the
 data even looks like. Felt like the responsible thing to do lmao, be the guy
 who unblocks everyone instead of just diving into my own corner.
+
+### The Fixed Header & Wireframe Slots
 
 After that I built out the fixed header, renders username, streak, the whole
 filter row (Date Range / Project / Language / OS / Editor / Category)... I
@@ -27,9 +32,11 @@ has something concrete to build into whenever he starts.
 Getting started is always the hardest part for me, every single time. But
 once the first commit was up everything just kinda... flowed after that.
 
-This is our planned layout for the site:
+### The Planned Layout
 
-```
+This is our planned layout for the dashboard:
+
+```text
 ┌──────────────────┬──────────────────────────────────────────────────────────────────────────────────┐
 │ [●] Chish 🇮🇳     │ Keep Track of Your Coding Time                                                   │
 │ [🔥 3 day streak]│ Today: 43m 27s logged (Python, JS, Rust, etc.) using Neovim & VSCode             │
@@ -84,6 +91,9 @@ This is our planned layout for the site:
 └─────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-How it looks right now!
+### Current Progress
 
-![HackatimeTUI](/screenshots/hackatime-tui-1.png)
+Here is how the wireframe looks right now in the terminal:
+
+![Image](/screenshots/hackatime-tui-1.png)
+
