@@ -1,11 +1,20 @@
 # The URL the site will be built for
 base_url = "https://chishxd.xyz"
 
+# Site title and description
+title = "Chish"
+description = "Chish's blog, guides, and devlogs"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
+
+# Generate RSS feed
+generate_feeds = true
+feed_filenames = ["rss.xml"]
+feed_limit = 20
 
 [markdown]
 insert_anchor_links = "left"
@@ -15,3 +24,6 @@ theme = "catppuccin-mocha"
 
 [extra]
 # Put all your custom variables here
+
+# RSS feed configuration
+

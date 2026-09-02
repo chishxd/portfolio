@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="{{ get_url(path="sans.png") }}">
     <link rel="stylesheet" href="{{ get_url(path="styles.css") }}">
+    {% block rss %}
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
+    {% endblock %}
 </head>
 
 <body>
@@ -37,6 +40,7 @@
     <span class="prompt">~ $ whoami</span>
     <span class="whoami">chish -- compsci ug</span>
     <a href="{{ get_url(path='@/about.md') }}" class="nav-about-link">./about</a>
+    <a href="{{ get_url(path='rss.xml') }}" class="nav-about-link">rss</a>
   </div>
 </nav>
   <ul style="padding-left: 0; list-style: none;">
