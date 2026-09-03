@@ -369,6 +369,18 @@ img {
     padding: 0.75rem;
     margin: 1rem 0;
   }
+
+  /* Bad Apple mobile: tighter frame around the easter egg */
+  .bad-apple {
+    min-height: auto;
+    gap: 1rem;
+  }
+
+  .badapple-stage {
+    max-width: 100%;
+    padding: 0.4rem 0.5rem;
+  }
+
   html {
     /* Accounts for the height of the sticky nav bar + a little extra padding */
     scroll-padding-top: 4.5rem;
@@ -402,20 +414,35 @@ img {
   color: var(--accent-pink);
 }
 
-.bad-apple-container {
+.badapple-stage {
   width: 100%;
-  max-width: 56rem;
-  aspect-ratio: 16 / 9;
+  max-width: 40rem;
   border: 2px solid var(--accent-mauve);
   border-radius: 8px;
-  overflow: hidden;
   background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: 0.75rem 1rem;
+  max-height: 80vh;
 }
 
-.bad-apple-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+.badapple-frame {
+  margin: 0 auto;
+  padding: 0;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  box-sizing: border-box;
+  line-height: 1.05;
+  /* Scale with viewport so all 64 columns fit without horizontal scroll,
+     while staying comfortably sized on large screens. */
+  font-size: clamp(0.3rem, 1.35vw, 1.05rem);
+  color: #fff;
+  letter-spacing: 0;
+  white-space: pre;
+  font-family: "Liberation Mono", "Courier New", monospace;
 }
 
 .bad-apple-footer {
