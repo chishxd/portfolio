@@ -395,6 +395,16 @@ img {
 }
 
 /* Bad Apple Easter Egg */
+html.ba-html,
+html.ba-html body {
+  overflow: hidden;
+  height: 100%;
+}
+
+body.ba-page {
+  overflow: hidden;
+}
+
 .bad-apple {
   display: flex;
   flex-direction: column;
@@ -436,9 +446,9 @@ img {
   box-shadow: none !important;
   box-sizing: border-box;
   line-height: 1.05;
-  /* Scale with viewport so all 64 columns fit without horizontal scroll,
-     while staying comfortably sized on large screens. */
-  font-size: clamp(0.3rem, 1.35vw, 1.05rem);
+  /* Scale with viewport width AND height so all 64 columns and 32 rows
+     always fit without any scrollbar. */
+  font-size: min(clamp(0.3rem, 1.35vw, 1.05rem), calc((78vh - 2rem) / 34));
   color: #fff;
   letter-spacing: 0;
   white-space: pre;

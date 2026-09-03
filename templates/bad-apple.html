@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 
+{% block html_attrs %} class="ba-html"{% endblock html_attrs %}
+{% block body_attrs %} class="ba-page"{% endblock body_attrs %}
+
 {% block content %}
 <div class="bad-apple">
   <a href="{{ get_url(path='@/_index.md') }}" class="bad-apple-back">&lt;-- back</a>
