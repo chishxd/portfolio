@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="bad-apple">
+  <a href="{{ get_url(path='@/_index.md') }}" class="bad-apple-back">&lt;-- back</a>
+  <div class="bad-apple-container">
+    <iframe
+      src="https://www.youtube.com/embed/FtutLA63Cp8?autoplay=1&mute=0&playsinline=1&controls=0&showinfo=0&rel=0&modestbranding=1&loop=1&playlist=FtutLA63Cp8&si=k7TcgY8A_QiDeMmK"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      loading="lazy"
+    ></iframe>
+  </div>
+  <p class="bad-apple-footer">you found it.</p>
+</div>
+{% endblock content %}

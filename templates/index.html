@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="intro">
-  <img src="{{ get_url(path='sans.jpg') }}" alt="Chish" class="profile-pic-main">
+  <img src="{{ get_url(path='sans.jpg') }}" alt="Chish" class="profile-pic-main" width="128" height="128">
   <div>
     {{ section.content | safe }}
   </div>
@@ -16,7 +16,7 @@
   {% set project = get_section(path=project_path) %}
   <li>
     <a href="{{ project.permalink }}">{{ project.title }}</a>
-    {% if project.description %}<p style="color: #999; margin: .2rem 0 0;">{{ project.description }}</p>{% endif %}
+    {% if project.description %}<p class="project-desc">{{ project.description }}</p>{% endif %}
   </li>
 {% endfor %}
 </ul>

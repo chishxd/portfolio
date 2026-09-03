@@ -95,5 +95,5 @@ This is our planned layout for the dashboard:
 
 Here is how the wireframe looks right now in the terminal:
 
-![Image](/screenshots/hackatime-tui-1.png)
+![Image](/screenshots/hackatime-tui-1.webp)
 

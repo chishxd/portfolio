@@ -67,7 +67,8 @@ nav > a {
   font-size: 1.1rem;
 }
 
-nav ul {
+nav ul,
+.nav-main-list {
   list-style: none;
   margin: 1.5rem 0 0;
   padding: 0;
@@ -373,6 +374,54 @@ img {
     scroll-padding-top: 4.5rem;
   }
 
+}
+
+/* Inline style replacements */
+.project-desc {
+  color: var(--text-muted);
+  margin: 0.2rem 0 0;
+}
+
+/* Bad Apple Easter Egg */
+.bad-apple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  gap: 1.5rem;
+}
+
+.bad-apple-back {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.bad-apple-back:hover {
+  color: var(--accent-pink);
+}
+
+.bad-apple-container {
+  width: 100%;
+  max-width: 56rem;
+  aspect-ratio: 16 / 9;
+  border: 2px solid var(--accent-mauve);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+}
+
+.bad-apple-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.bad-apple-footer {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-style: italic;
 }
 
 /* Smooth scrolling and anchor offset */

@@ -17,7 +17,7 @@
   <a href="{{ get_url(path='@/_index.md') }}">CHISH</a>
 
   <!-- Top level list: padding-left set to 0 to align with CHISH -->
-  <ul style="padding-left: 0; list-style: none;">
+  <ul class="nav-main-list">
     <li><a href="{{ get_url(path='@/blogs/_index.md') }}">blogs/</a></li>
     <li><a href="{{ get_url(path='@/guides/_index.md') }}">guides/</a></li>
     <li><a href="{{ get_url(path='@/projects/_index.md') }}">projects/</a></li>
@@ -30,8 +30,17 @@
     <a href="{{ get_url(path='rss.xml') }}" class="nav-about-link">rss</a>
   </div>
 </nav>
-  <ul style="padding-left: 0; list-style: none;">
   <main>
     {% block content %}{% endblock content %}
   </main>
+  <script>
+  (() => {
+    const k = [38,38,40,40,37,39,37,39,66,65];
+    let i = 0;
+    document.addEventListener("keydown", e => {
+      if (e.keyCode === k[i]) { if (++i === k.length) { location.href = "{{ get_url(path='bad-apple/') }}"; } }
+      else { i = 0; }
+    });
+  })();
+  </script>
 </body>
