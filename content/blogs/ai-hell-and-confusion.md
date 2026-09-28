@@ -4,7 +4,7 @@ date = 2026-09-09
 description = "How I caught myself falling into AI tutorial hell, broke the habit to design structs and TUI layout math from scratch, and survived team Git merges."
 +++
 
-Me and two friends are building a regex parser and interactive TUI in Go for Hack Club—basically regex101, but running directly inside the terminal using Bubble Tea.
+Me and two friends are building a regex parser and interactive TUI in Go for Hack Club -- basically regex101, but running directly inside the terminal using Bubble Tea.
 
 One friend took the engine (lexer, parser, NFA matcher), the third guy was building the bridge between the two, and I took the TUI.
 
