@@ -3,13 +3,13 @@
   --bg: #1a1a1a;       /* page background */
   --bg-alt: #222222;   /* nav + code surfaces */
   --border: #383838;   /* lines, borders, dividers */
-  --text: #d4d4d4;     /* body copy */
+  --text: #e0e0e0;     /* body copy - readable, not washed out */
   --dim: #8c8c8c;      /* secondary / meta text */
-  --hi: #f2f2f2;       /* headings, hover */
+  --hi: #ffffff;       /* headings - clear step up from body */
 
-  /* Link states - the only two hues on the site */
+  /* Link color. No :visited state on purpose - a link stays blue once
+     visited, so its color is stable and predictable. */
   --link: #6cb6ff;     /* approachable blue */
-  --link-visited: #c9a0f0; /* muted purple */
 }
 
 * {
@@ -75,10 +75,6 @@ nav li a {
   text-decoration: none;
 }
 
-nav li a:visited {
-  color: var(--link-visited);
-}
-
 nav li a:hover {
   color: #a8d3ff;
 }
@@ -107,10 +103,6 @@ nav li a:hover {
   text-decoration: none;
 }
 
-.nav-about-link:visited {
-  color: var(--link-visited);
-}
-
 .nav-about-link:hover {
   color: #a8d3ff;
 }
@@ -136,9 +128,14 @@ h1, h2, h3 {
   line-height: 1.3;
 }
 
-h1 { font-size: 1.5rem; margin-top: 0; color: var(--hi); }
-h2 { font-size: 1.25rem; }
-h3 { font-size: 1.1rem; color: var(--hi); }
+h1 { font-size: 1.75rem; margin-top: 0; color: var(--hi); letter-spacing: -0.01em; }
+h2 {
+  font-size: 1.4rem;
+  color: var(--hi);
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+}
+h3 { font-size: 1.15rem; color: var(--hi); }
 
 .zola-anchor {
   color: var(--dim);
@@ -160,10 +157,6 @@ a {
   text-decoration: underline;
   text-underline-offset: 0.15em;
   text-decoration-color: var(--border);
-}
-
-a:visited {
-  color: var(--link-visited);
 }
 
 a:hover {
