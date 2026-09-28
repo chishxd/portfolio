@@ -5,7 +5,11 @@
   --border: #383838;   /* lines, borders, dividers */
   --text: #d4d4d4;     /* body copy */
   --dim: #8c8c8c;      /* secondary / meta text */
-  --hi: #f2f2f2;       /* headings, links, hover */
+  --hi: #f2f2f2;       /* headings, hover */
+
+  /* Link states - the only two hues on the site */
+  --link: #6cb6ff;     /* approachable blue */
+  --link-visited: #c9a0f0; /* muted purple */
 }
 
 * {
@@ -67,11 +71,16 @@ nav li {
 }
 
 nav li a {
-  color: var(--text);
+  color: var(--link);
+  text-decoration: none;
+}
+
+nav li a:visited {
+  color: var(--link-visited);
 }
 
 nav li a:hover {
-  color: var(--hi);
+  color: #a8d3ff;
 }
 
 .nav-bottom {
@@ -94,12 +103,16 @@ nav li a:hover {
 
 .nav-about-link {
   font-size: 0.85rem;
-  color: var(--hi);
+  color: var(--link);
   text-decoration: none;
 }
 
+.nav-about-link:visited {
+  color: var(--link-visited);
+}
+
 .nav-about-link:hover {
-  color: #ffffff;
+  color: #a8d3ff;
 }
 
 /* Main Content Area */
@@ -143,18 +156,18 @@ p {
 }
 
 a {
-  color: var(--hi);
+  color: var(--link);
   text-decoration: underline;
   text-underline-offset: 0.15em;
   text-decoration-color: var(--border);
 }
 
 a:visited {
-  color: var(--dim);
+  color: var(--link-visited);
 }
 
 a:hover {
-  color: #ffffff;
+  color: #a8d3ff;
   text-decoration-color: currentColor;
 }
 
@@ -180,7 +193,7 @@ small {
 code {
   font-family: inherit;
   background: var(--bg-alt);
-  color: var(--dim);
+  color: #ffffff;
   padding: 0.18em 0.45em;
   border-radius: 4px;
   font-size: 0.88em;
@@ -201,9 +214,8 @@ pre[style] {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  /* Syntax highlighting keeps its light/dark contrast but loses all hue,
-     so code blocks stay inside the grayscale palette. */
-  filter: grayscale(1);
+  /* Fenced blocks keep their GitHub Dark syntax colours; only inline
+     `code` is forced to plain white. */
 }
 
 pre code,
