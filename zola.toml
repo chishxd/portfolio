@@ -20,7 +20,9 @@ feed_limit = 20
 insert_anchor_links = "left"
 
 [markdown.highlighting]
-theme = "catppuccin-mocha"
+# "css" emits class-based markup so the code palette can follow the
+# grayscale theme in styles.css instead of baking in a colorful theme.
+theme = "github-dark"
 
 [extra]
 # Put all your custom variables here
