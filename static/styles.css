@@ -496,6 +496,10 @@ img {
   color: var(--text);
 }
 
+.lrn-date {
+  color: var(--dim);
+}
+
 .lrn-crumb {
   display: flex;
   align-items: baseline;

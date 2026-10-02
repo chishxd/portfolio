@@ -1,0 +1,71 @@
+{#
+  Metadata header for an entry page.
+
+  Guarded on the page actually carrying tags or one of the extras, so pages
+  that use none of this render nothing at all. `about.md` sets
+  `extra.profile_pic`, so testing `extra is defined` would be far too loose.
+
+  On a listing the caller sets `show_title`, and the title is emitted inside
+  the badge row so the head stays on one line. On the entry page itself the
+  <h1> above already says the title, so the head is metadata only.
+#}
+{% set has_tags = page.taxonomies.tags is defined and page.taxonomies.tags | length > 0 %}
+{% set has_meta = page.extra.difficulty is defined
+                  or page.extra.status is defined
+                  or page.extra.author is defined
+                  or page.extra.problem is defined
+                  or page.extra.link is defined %}
+{% if has_tags or has_meta %}
+  <div class="lrn-entry-head">
+    {% if show_title is defined and show_title %}
+      <a class="lrn-entry-title" href="{{ page.permalink }}">{{ page.title }}</a>
+    {% endif %}
+    {% if page.extra.difficulty is defined %}
+      <span class="lrn-badge lrn-{{ page.extra.difficulty | lower }}">{{ page.extra.difficulty }}</span>
+    {% endif %}
+    {% if page.extra.status is defined %}
+      <span class="lrn-status lrn-status-{{ page.extra.status | lower }}">{{ page.extra.status }}</span>
+    {% endif %}
+    {% if page.date %}
+      <small class="lrn-date">{{ page.date | date(format="%Y-%m-%d") }}</small>
+    {% endif %}
+  </div>
+
+  {% if page.description %}
+    <p class="lrn-entry-desc">{{ page.description }}</p>
+  {% endif %}
+
+  <p class="lrn-meta">
+    {% if page.extra.author is defined %}
+      <span class="lrn-author">{{ page.extra.author }}</span>
+    {% endif %}
+    {% if has_tags %}
+      {% for tag in page.taxonomies.tags %}
+        <a class="lrn-tag" href="{{ get_taxonomy_url(kind='tags', term=tag) }}">{{ tag }}</a>
+      {% endfor %}
+    {% endif %}
+    {% if page.extra.problem is defined %}
+      <a class="lrn-ext" href="{{ page.extra.problem }}" rel="noopener">problem ↗</a>
+    {% endif %}
+    {% if page.extra.link is defined %}
+      <a class="lrn-ext" href="{{ page.extra.link }}" rel="noopener">link ↗</a>
+    {% endif %}
+  </p>
+
+  {% if page.extra.related is defined %}
+    {% set sibling_section = get_section(path=page.ancestors | last) %}
+    <p class="lrn-related">
+      {% for rel in page.extra.related %}
+        {# Matched by slug, so a stale reference renders nothing instead of
+           failing the build. #}
+        {% if sibling_section %}
+          {% for other in sibling_section.pages %}
+            {% if other.slug == rel %}
+              <a href="{{ other.permalink }}">{{ other.title }}</a>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </p>
+  {% endif %}
+{% endif %}

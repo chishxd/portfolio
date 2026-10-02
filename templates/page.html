@@ -8,6 +8,10 @@
   {% endif %}
   <h1><a class="zola-anchor" href="#">#</a>{{page.title}}</h1>
 
+  {# Renders nothing unless the page carries tags or one of the section's
+     extras, so blogs and guides are unaffected. #}
+  {% include "partials/entry-meta.html" %}
+
   {{page.content | safe}}
 </article>
 {% endblock content %}
