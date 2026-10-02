@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{#
+  Index of every tag, at /random/tags/.
+  `terms` is an array of TaxonomyTerm: name, slug, permalink, page_count.
+#}
+
+{% block content %}
+  <h1><a class="zola-anchor" href="#">#</a>Tags</h1>
+  <p class="lrn-crumb">
+    <a href="/random/">&larr; all entries</a>
+  </p>
+
+  {% if terms %}
+  <ul class="lrn-terms">
+  {% for term in terms %}
+    <li>
+      <a class="lrn-tag" href="{{ term.permalink }}">{{ term.name }}</a>
+      <small>{{ term.page_count }}</small>
+    </li>
+  {% endfor %}
+  </ul>
+  {% else %}
+    <p>No tags yet.</p>
+  {% endif %}
+{% endblock content %}

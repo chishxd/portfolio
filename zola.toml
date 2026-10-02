@@ -16,16 +16,22 @@ generate_feeds = true
 feed_filenames = ["rss.xml"]
 feed_limit = 20
 
+# Entries in content/random/ are grouped by tag rather than by folder, so
+# nothing has to be moved when the categories change. Zola generates a page
+# per tag on its own; taxonomy_root puts them under /random/tags/ instead
+# of the default top-level /tags/.
+taxonomies = [{ name = "tags" }]
+taxonomy_root = "random"
+
 [markdown]
 insert_anchor_links = "left"
 
 [markdown.highlighting]
-# "css" emits class-based markup so the code palette can follow the
-# grayscale theme in styles.css instead of baking in a colorful theme.
+# Matches the site's dark background. The "css" option would emit
+# class-based markup for styles.css to colour instead.
 theme = "github-dark"
 
 [extra]
-# Put all your custom variables here
+# Put your custom variables here
 
 # RSS feed configuration
-

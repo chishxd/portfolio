@@ -31,6 +31,19 @@
   </div>
 </nav>
   <main>
+    {% block parent %}
+      {# One level up. `ancestors` is ordered root first, so the last entry is
+         the immediate parent. Page templates expose `page`, section templates
+         expose `section`, and taxonomy templates expose neither - those carry
+         their own crumbs, so nothing renders there. #}
+      {% if page is defined and page.ancestors %}
+        {% set up = get_section(path=page.ancestors | last) %}
+        {% if up %}<p class="up-link"><a href="{{ up.permalink }}">&uarr; {{ up.title | lower }}</a></p>{% endif %}
+      {% elif section is defined and section.ancestors %}
+        {% set up = get_section(path=section.ancestors | last) %}
+        {% if up %}<p class="up-link"><a href="{{ up.permalink }}">&uarr; {{ up.title | lower }}</a></p>{% endif %}
+      {% endif %}
+    {% endblock parent %}
     {% block content %}{% endblock content %}
   </main>
   <script>

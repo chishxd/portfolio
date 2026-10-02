@@ -17,6 +17,7 @@ Besides that, I love playing games, reading books and writing.
 
 ## Quick Links
 
+[random](@/random/_index.md)\
 [Github](https://github.com/chishxd)\
 [Codeberg](https://codeberg.org/chish)\
 [Last.fm](https://www.last.fm/user/ChishGG)

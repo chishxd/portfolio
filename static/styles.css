@@ -120,6 +120,24 @@ article {
   min-width: 0;
 }
 
+/* One level up, rendered above the page content by base.html */
+.up-link {
+  margin: 0 0 1.1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.up-link a {
+  color: var(--dim);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.up-link a:hover {
+  color: var(--link);
+  border-bottom-color: currentColor;
+}
+
 /* Headings */
 h1, h2, h3 {
   color: var(--hi);
@@ -389,6 +407,201 @@ img {
 .project-desc {
   color: var(--dim);
   margin: 0.2rem 0 0;
+}
+
+/* Random section (content/random, grouped by tag) */
+.lrn-searchbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.5rem 0 0;
+}
+
+.lrn-search {
+  flex: 1 1 18rem;
+  min-width: 0;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+}
+.lrn-search::placeholder {
+  color: var(--dim);
+}
+.lrn-search:focus {
+  outline: none;
+  border-color: var(--link);
+}
+.lrn-search::-webkit-search-cancel-button {
+  filter: grayscale(1) invert(0.7);
+}
+
+.lrn-searchbar small {
+  color: var(--dim);
+  white-space: nowrap;
+}
+
+.lrn-clear {
+  font: inherit;
+  font-size: 0.8rem;
+  color: var(--dim);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.25em 0.6em;
+  cursor: pointer;
+}
+.lrn-clear:hover {
+  color: var(--hi);
+  border-color: var(--hi);
+}
+
+.lrn-empty {
+  color: var(--dim);
+  margin: 1.5rem 0 0;
+}
+
+.lrn-list {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+}
+
+.lrn-entry {
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+}
+.lrn-entry:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.lrn-entry-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.lrn-entry-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.lrn-entry-desc {
+  margin: 0.35rem 0 0;
+  color: var(--text);
+}
+
+.lrn-crumb {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin: 0.5rem 0 0;
+}
+
+.lrn-badge,
+.lrn-status {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.15em 0.5em;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  color: var(--dim);
+  white-space: nowrap;
+}
+
+/* Problem difficulty */
+.lrn-easy { color: #9fd89f; border-color: #3d5a3d; }
+.lrn-medium { color: #e3c78a; border-color: #5c5133; }
+.lrn-hard { color: #e39a9a; border-color: #5c3a3a; }
+
+/* Reading status */
+.lrn-status-reading { color: #9ec7e3; border-color: #3d5266; }
+.lrn-status-finished { color: #9fd89f; border-color: #3d5a3d; }
+.lrn-status-dropped { color: #9a9a9a; border-color: #4a4a4a; }
+
+.lrn-meta {
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+.lrn-author {
+  color: var(--dim);
+}
+
+.lrn-tag {
+  font-size: 0.75rem;
+  padding: 0.12em 0.45em;
+  border-radius: 3px;
+  background: var(--bg-alt);
+  color: var(--link);
+  border: 1px solid var(--border);
+  text-decoration: none;
+}
+.lrn-tag:hover {
+  background: var(--border);
+  color: var(--link);
+}
+
+.lrn-ext {
+  font-size: 0.85rem;
+}
+
+.lrn-related {
+  margin: 0.4rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+}
+.lrn-related a {
+  color: var(--link);
+}
+
+.lrn-terms {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+}
+.lrn-terms li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+}
+
+.random-howto {
+  margin: 1.5rem 0;
+}
+.random-howto details {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-alt);
+  padding: 0.6rem 0.9rem;
+}
+.random-howto summary {
+  cursor: pointer;
+  color: var(--hi);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.random-howto details[open] summary {
+  margin-bottom: 0.6rem;
+}
+.random-howto pre {
+  margin: 0.6rem 0 0;
 }
 
 /* Bad Apple Easter Egg */

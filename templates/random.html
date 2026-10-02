@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{#
+  Landing page for the random section.
+
+  One flat list of everything, newest first, with each entry's tags linking to
+  the auto-generated tag pages. Optional metadata lives under `extra`, so
+  every lookup is guarded to keep a half-filled entry from failing the build.
+#}
+
+{% block content %}
+  <h1><a class="zola-anchor" href="#">#</a>{{ section.title }}</h1>
+
+  {{ section.content | safe }}
+
+  {% if section.pages %}
+  <div class="lrn-searchbar">
+    <input
+      type="search"
+      class="lrn-search"
+      data-lrn-search
+      placeholder="Search title, tags, author, or text...  (press / )"
+      autocomplete="off"
+      autocapitalize="off"
+      spellcheck="false"
+      aria-label="Search random">
+    <small data-lrn-count></small>
+    <button type="button" class="lrn-clear" data-lrn-clear hidden>clear</button>
+  </div>
+
+  <ul class="lrn-list">
+  {% for page in section.pages | reverse %}
+    <li class="lrn-entry" data-search="{{ page.title }} {% if page.description %}{{ page.description }} {% endif %}{% if page.extra.author is defined %}{{ page.extra.author }} {% endif %}{% if page.taxonomies.tags %}{% for tag in page.taxonomies.tags %}{{ tag }} {% endfor %}{% endif %}{% if page.extra.difficulty is defined %}{{ page.extra.difficulty }} {% endif %}{% if page.extra.status is defined %}{{ page.extra.status }} {% endif %}{{ page.content | striptags}}">
+      <div class="lrn-entry-head">
+        <a class="lrn-entry-title" href="{{ page.permalink }}">{{ page.title }}</a>
+        {% if page.extra.difficulty is defined %}
+          <span class="lrn-badge lrn-{{ page.extra.difficulty | lower }}">{{ page.extra.difficulty }}</span>
+        {% endif %}
+        {% if page.extra.status is defined %}
+          <span class="lrn-status lrn-status-{{ page.extra.status | lower }}">{{ page.extra.status }}</span>
+        {% endif %}
+      </div>
+      {% if page.date %}
+        <small>{{ page.date | date(format="%Y-%m-%d") }}</small>
+      {% endif %}
+      {% if page.description %}
+        <p class="lrn-entry-desc">{{ page.description }}</p>
+      {% endif %}
+      <p class="lrn-meta">
+        {% if page.extra.author is defined %}
+          <span class="lrn-author">{{ page.extra.author }}</span>
+        {% endif %}
+        {% if page.taxonomies.tags %}
+          {% for tag in page.taxonomies.tags %}
+            <a class="lrn-tag" href="{{ get_taxonomy_url(kind='tags', term=tag) }}">{{ tag }}</a>
+          {% endfor %}
+        {% endif %}
+        {% if page.extra.problem is defined %}
+          <a class="lrn-ext" href="{{ page.extra.problem }}" rel="noopener">problem ↗</a>
+        {% endif %}
+        {% if page.extra.link is defined %}
+          <a class="lrn-ext" href="{{ page.extra.link }}" rel="noopener">link ↗</a>
+        {% endif %}
+      </p>
+      {% if page.extra.related is defined %}
+      <p class="lrn-related">
+        {% for rel in page.extra.related %}
+          {# Matched by slug, so a stale reference renders nothing instead of
+             failing the build. #}
+          {% for other in section.pages %}
+            {% if other.slug == rel %}
+              <a href="{{ other.permalink }}">{{ other.title }}</a>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </p>
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+
+  <p class="lrn-empty" data-lrn-empty hidden>No entries match that.</p>
+  {% else %}
+    <p>Nothing here yet.</p>
+  {% endif %}
+
+  <script defer src="{{ get_url(path='learnsearch.js') }}"></script>
+{% endblock content %}
