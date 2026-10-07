@@ -13,21 +13,18 @@
 </head>
 
 <body{% block body_attrs %}{% endblock body_attrs %}>
-    <nav>
-  <a href="{{ get_url(path='@/_index.md') }}">CHISH</a>
+    <nav class="topbar">
+  <a class="topbar-site" href="{{ get_url(path='@/_index.md') }}">CHISH</a>
 
-  <!-- Top level list: padding-left set to 0 to align with CHISH -->
-  <ul class="nav-main-list">
+  <ul class="topbar-links">
     <li><a href="{{ get_url(path='@/blogs/_index.md') }}">blogs/</a></li>
     <li><a href="{{ get_url(path='@/guides/_index.md') }}">guides/</a></li>
     <li><a href="{{ get_url(path='@/projects/_index.md') }}">projects/</a></li>
   </ul>
 
-  <div class="nav-bottom">
-    <span class="prompt">~ $ whoami</span>
-    <span class="whoami">chish -- compsci ug</span>
-    <a href="{{ get_url(path='@/about.md') }}" class="nav-about-link">./about</a>
-    <a href="{{ get_url(path='rss.xml') }}" class="nav-about-link">rss</a>
+  <div class="topbar-end">
+    <a href="{{ get_url(path='@/about.md') }}">about</a>
+    <a href="{{ get_url(path='rss.xml') }}">rss</a>
   </div>
 </nav>
   <main>
