@@ -1,42 +1,37 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="intro">
-  {{ section.content | safe }}
-</div>
+{{ section.content | safe }}
 
 <hr>
 
 {% set blogs = get_section(path="blog/_index.md") %}
 {% if blogs.pages %}
-<h2>Recent Posts</h2>
+<h2>Recent posts</h2>
 <ul>
-{% set counter = 0 %}
-{% for page in blogs.pages %}
-{% if counter >= 5 %}{% break %}{% endif %}
-{% set counter = counter + 1 %}
+  {% for post in blogs.pages | reverse %}
+  {% if loop.index <= 5 %}
   <li>
-    <a href="{{ page.permalink }}">{{ page.title }}</a>
-    {% if page.date %}<small>{{ page.date }}</small>{% endif %}
+    <a href="{{ post.permalink }}">{{ post.title }}</a>
+    {% if post.date %}<small>{{ post.date | date(format="%Y-%m-%d") }}</small>{% endif %}
   </li>
-{% endfor %}
+  {% endif %}
+  {% endfor %}
 </ul>
-<p><a href="{{ blogs.permalink }}">see more -></a></p>
+<p><a href="{{ blogs.permalink }}">all posts</a></p>
 {% endif %}
 
 <hr>
 
 {% set devlogs = get_section(path="devlogs/_index.md") %}
 {% if devlogs.subsections %}
-<h2>Recent Devlogs</h2>
+<h2>Recent devlogs</h2>
 <ul>
-{% for devlog_path in devlogs.subsections %}
+  {% for devlog_path in devlogs.subsections %}
   {% set devlog = get_section(path=devlog_path) %}
-  <li>
-    <a href="{{ devlog.permalink }}">{{ devlog.title }}</a>
-  </li>
-{% endfor %}
+  <li><a href="{{ devlog.permalink }}">{{ devlog.title }}</a></li>
+  {% endfor %}
 </ul>
-<p><a href="{{ devlogs.permalink }}">see more -></a></p>
+<p><a href="{{ devlogs.permalink }}">all devlogs</a></p>
 {% endif %}
 {% endblock content %}

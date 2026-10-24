@@ -1,17 +1,14 @@
 {% extends "base.html" %}
 
+{% block title %}{{ page.title }} · Chish{% endblock title %}
 
 {% block content %}
-<article>
-  {% if page.extra.profile_pic %}
-  <img src="{{ get_url(path=page.extra.profile_pic) }}" alt="{{ page.title }}" class="profile-pic-about">
-  {% endif %}
-  <h1><a class="zola-anchor" href="#">#</a>{{page.title}}</h1>
+{% set parent = get_section(path=page.ancestors | last) %}
+<small><a href="{{ parent.permalink }}">&larr; {{ parent.title | lower }}</a></small>
 
-  {# Renders nothing unless the page carries tags or one of the section's
-     extras, so blogs and guides are unaffected. #}
-  {% include "partials/entry-meta.html" %}
+<h1>{{ page.title }}</h1>
 
-  {{page.content | safe}}
-</article>
+{% include "partials/entry-meta.html" %}
+
+{{ page.content | safe }}
 {% endblock content %}
