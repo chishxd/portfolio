@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <title>Chish</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="{{ get_url(path="sans.png") }}">
     <link rel="stylesheet" href="{{ get_url(path="styles.css") }}">
     {% block rss %}
       <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
@@ -17,13 +16,11 @@
   <a class="topbar-site" href="{{ get_url(path='@/_index.md') }}">CHISH</a>
 
   <ul class="topbar-links">
-    <li><a href="{{ get_url(path='@/blogs/_index.md') }}">blogs/</a></li>
-    <li><a href="{{ get_url(path='@/guides/_index.md') }}">guides/</a></li>
-    <li><a href="{{ get_url(path='@/projects/_index.md') }}">projects/</a></li>
+    <li><a href="{{ get_url(path='@/blog/_index.md') }}">blog/</a></li>
+    <li><a href="{{ get_url(path='@/devlogs/_index.md') }}">devlogs/</a></li>
   </ul>
 
   <div class="topbar-end">
-    <a href="{{ get_url(path='@/about.md') }}">about</a>
     <a href="{{ get_url(path='rss.xml') }}">rss</a>
   </div>
 </nav>
@@ -33,7 +30,7 @@
          the immediate parent. Page templates expose `page`, section templates
          expose `section`, and taxonomy templates expose neither - those carry
          their own crumbs, so nothing renders there. The label is `../`, the
-         terminal "up one directory", since an arrow read as decoration. #}
+         terminal "up one directory". #}
       {% set up = false %}
       {% if page is defined and page.ancestors %}
         {% set up = get_section(path=page.ancestors | last) %}
@@ -46,14 +43,4 @@
     {% endblock parent %}
     {% block content %}{% endblock content %}
   </main>
-  <script>
-  (() => {
-    const k = [38,38,40,40,37,39,37,39,66,65];
-    let i = 0;
-    document.addEventListener("keydown", e => {
-      if (e.keyCode === k[i]) { if (++i === k.length) { location.href = "{{ get_url(path='bad-apple/') }}"; } }
-      else { i = 0; }
-    });
-  })();
-  </script>
 </body>

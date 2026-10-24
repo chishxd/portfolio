@@ -2,36 +2,18 @@
 
 {% block content %}
 <div class="intro">
-  <img src="{{ get_url(path='sans.jpg') }}" alt="Chish" class="profile-pic-main" width="128" height="128">
-  <div>
-    {{ section.content | safe }}
-  </div>
+  {{ section.content | safe }}
 </div>
-
-{% set projects = get_section(path="projects/_index.md") %}
-{% if projects.subsections %}
-<h2>Projects</h2>
-<ul>
-{% for project_path in projects.subsections %}
-  {% set project = get_section(path=project_path) %}
-  <li>
-    <a href="{{ project.permalink }}">{{ project.title }}</a>
-    {% if project.description %}<p class="project-desc">{{ project.description }}</p>{% endif %}
-  </li>
-{% endfor %}
-</ul>
-<p><a href="{{ projects.permalink }}">see more -></a></p>
-{% endif %}
 
 <hr>
 
-{% set blogs = get_section(path="blogs/_index.md") %}
+{% set blogs = get_section(path="blog/_index.md") %}
 {% if blogs.pages %}
 <h2>Recent Posts</h2>
 <ul>
 {% set counter = 0 %}
 {% for page in blogs.pages %}
-{% if counter >= 3 %}{% break %}{% endif %}
+{% if counter >= 5 %}{% break %}{% endif %}
 {% set counter = counter + 1 %}
   <li>
     <a href="{{ page.permalink }}">{{ page.title }}</a>
@@ -40,5 +22,21 @@
 {% endfor %}
 </ul>
 <p><a href="{{ blogs.permalink }}">see more -></a></p>
+{% endif %}
+
+<hr>
+
+{% set devlogs = get_section(path="devlogs/_index.md") %}
+{% if devlogs.subsections %}
+<h2>Recent Devlogs</h2>
+<ul>
+{% for devlog_path in devlogs.subsections %}
+  {% set devlog = get_section(path=devlog_path) %}
+  <li>
+    <a href="{{ devlog.permalink }}">{{ devlog.title }}</a>
+  </li>
+{% endfor %}
+</ul>
+<p><a href="{{ devlogs.permalink }}">see more -></a></p>
 {% endif %}
 {% endblock content %}
