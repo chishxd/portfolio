@@ -21,5 +21,10 @@
     {% block parent %}{% endblock parent %}
     {% block content %}{% endblock content %}
   </main>
+<footer>
+  {% for s in config.extra.socials %}
+  <a href="{{ s.url }}" title="{{ s.name }}"><img src="{{ get_url(path='icons/' ~ s.icon) }}" alt="{{ s.name }}"></a>
+  {% endfor %}
+</footer>
 </body>
 </html>

@@ -9,11 +9,11 @@
 {% if blogs.pages %}
 <h2>Recent posts</h2>
 <ul>
-  {% for post in blogs.pages | reverse %}
+  {% for post in blogs.pages %}
   {% if loop.index <= 5 %}
   <li>
     <a href="{{ post.permalink }}">{{ post.title }}</a>
-    {% if post.date %}<small>{{ post.date | date(format="%Y-%m-%d") }}</small>{% endif %}
+    <small>{{ post.date | date(format="%Y-%m-%d") }}</small>
   </li>
   {% endif %}
   {% endfor %}
