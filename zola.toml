@@ -36,7 +36,8 @@ theme = "github-dark"
 socials = [
   { name = "GitHub", url = "https://github.com/chishxd", icon = "github.svg" },
   { name = "Codeberg", url = "https://codeberg.org/chish", icon = "codeberg.svg" },
-  { name = "Bluesky", url = "https://bsky.app/profile/your-handle", icon = "bluesky.svg" },
-  { name = "Discord", url = "https://discord.com/users/your-id", icon = "discord.svg" },
+  { name = "Bluesky", url = "https://bsky.app/profile/chishxd.bsky.social", icon = "bluesky.svg" },
+  { name = "Discord", url = "https://discord.com/users/chishxd", icon = "discord.svg" },
+  { name = "X/Twitter", url = "https://x.com/ChishGG", icon = "x.svg" },
 ]
 # RSS feed configuration
