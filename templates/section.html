@@ -18,7 +18,7 @@
 
 {% if section.pages %}
 <ul>
-  {% for page in section.pages | reverse %}
+  {% for page in section.pages %}
   <li>
     <a href="{{ page.permalink }}">{{ page.title }}</a>
     {% if page.date %}<small>{{ page.date | date(format="%Y-%m-%d") }}</small>{% endif %}
