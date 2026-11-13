@@ -6,9 +6,15 @@
 {% set parent = get_section(path=page.ancestors | last) %}
 <small><a href="{{ parent.permalink }}">&larr; {{ parent.title | lower }}</a></small>
 
-<h1>{{ page.title }}</h1>
+<article class="h-entry">
+  <h1 class="p-name">{{ page.title }}</h1>
 
-{% include "partials/entry-meta.html" %}
+  {% include "partials/entry-meta.html" %}
+  <a class="u-url" href="{{ page.permalink }}" hidden></a>
+  <a class="p-author h-card" href="{{ config.base_url }}" hidden>Chish</a>
 
-{{ page.content | safe }}
+  <div class="e-content">
+    {{ page.content | safe }}
+  </div>
+</article>
 {% endblock content %}

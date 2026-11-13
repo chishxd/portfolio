@@ -1,11 +1,11 @@
 {% if page.date %}
-<p><small>{{ page.date | date(format="%Y-%m-%d") }}</small></p>
+<p><small><time class="dt-published" datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time></small></p>
 {% endif %}
 
 {% if page.taxonomies.tags %}
 <p>
   {% for tag in page.taxonomies.tags %}
-  <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+  <a class="p-category" href="{{ get_taxonomy_url(kind='tags', name=tag) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
   {% endfor %}
 </p>
 {% endif %}

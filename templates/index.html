@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-{{ section.content | safe }}
+<div class="h-card">
+  <a class="p-name u-url" rel="me" href="{{ config.base_url }}" hidden>Chish</a>
+  <div class="p-note">{{ section.content | safe }}</div>
+</div>
 
 <hr>
 
