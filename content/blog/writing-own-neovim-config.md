@@ -2,6 +2,8 @@
 title = "How I dropped LazyVim and wrote my own configuration from scratch"
 date = "2026-11-14"
 description = "A guide and devlog about how I wrote my neovim configurations"
+[taxonomies]
+tags = ["neovim", "terminal", "config"]
 +++
 
 Neovim is one of the most popular text editors nowadays, and there are some very good reasons for that!
