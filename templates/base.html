@@ -8,7 +8,7 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path='rss.xml', trailing_slash=false) }}">
   <link rel="icon" type="image/png" href="{{ get_url(path='sans.png') }}">
   <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
-
+  <link rel="webmention" href="https://webmention.io/chish.dev/webmention" />
   <!-- Social / Discord Embeds -->
   <meta property="og:title" content="{% block og_title %}{{ config.title | default(value='Chish') }}{% endblock og_title %}">
   <meta property="og:description" content="{% block og_description %}{{ config.description }}{% endblock og_description %}">
