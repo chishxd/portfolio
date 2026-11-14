@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 
 {% block title %}{{ page.title }} · Chish{% endblock title %}
+{% block description %}{% if page.description %}{{ page.description }}{% else %}{{ config.description }}{% endif %}{% endblock description %}
+{% block og_title %}{{ page.title }} · Chish{% endblock og_title %}
+{% block og_description %}{% if page.description %}{{ page.description }}{% else %}{{ config.description }}{% endif %}{% endblock og_description %}
+{% block og_type %}article{% endblock og_type %}
 
 {% block content %}
 {% set parent = get_section(path=page.ancestors | last) %}

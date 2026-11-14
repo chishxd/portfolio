@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="h-card">
-  <a class="p-name u-url" rel="me" href="{{ config.base_url }}" hidden>Chish</a>
-  <div class="p-note">{{ section.content | safe }}</div>
+<div class="h-card intro">
+  <img class="u-photo avatar" src="{{ get_url(path='sans.jpg') }}" alt="Chish">
+  <div class="intro-text">
+    <a class="p-name u-url" rel="me" href="{{ config.base_url }}" hidden>Chish</a>
+    <div class="p-note">{{ section.content | safe }}</div>
+  </div>
 </div>
 
 <hr>
