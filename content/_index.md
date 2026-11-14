@@ -8,7 +8,7 @@ I'm Chish, a CS student who builds low-level things to understand them: a Chip-8
 <div data-marquee>
   <div>
       <div>
-        <a href="https://chish.dev" target="_blank" rel="noopener"><img src="/buttons/quantinium.png" width="88" height="31" alt="Quantinium's site"></a>
+        <a href="https://chish.dev" target="_blank" rel="noopener"><img src="/buttons/chish_88x31.png" width="88" height="31" alt="My personal site!"></a>
         <a href="https://quantinium.dev" target="_blank" rel="noopener"><img src="/buttons/quantinium.png" width="88" height="31" alt="Quantinium's site"></a>
         <a href="https://fedoraproject.org" target="_blank" rel="noopener"><img src="/buttons/fedora.gif" width="88" height="31" alt="Fedora"></a>
         <a href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener"><img src="/buttons/firefox.gif" width="88" height="31" alt="Firefox"></a>
