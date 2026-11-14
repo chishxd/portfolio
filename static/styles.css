@@ -100,3 +100,31 @@ footer a:hover { color: var(--strong); }
   [data-marquee] > div > div { flex-wrap: wrap; }
   [data-marquee] > div > div[aria-hidden] { display: none; }
 }
+
+.post-card {
+  margin-bottom: 2.5rem;
+}
+
+.post-meta {
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.continue-reading {
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.continue-reading a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.continue-reading a:hover {
+  text-decoration: underline;
+}
+
+.post-divider {
+  margin: 2.5rem 0;
+}

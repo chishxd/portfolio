@@ -6,15 +6,25 @@ description = "A guide and devlog about how I wrote my neovim configurations"
 tags = ["neovim", "terminal", "config"]
 +++
 
-Neovim is one of the most popular text editors nowadays, and there are some very good reasons for that!
-It is very fast, simple and most importantly-- It is VERY customizable. Numerous different plugins, each with their pros and cons make
-it very difficult to decide what to choose and what not to choose, 3 different plugins, seemingly doing exactly same things could feel
-VERY different, and even forums on internet seem to have very strong opinions about each of them... which made me spiral into [analysis
-paralysis](https://en.wikipedia.org/wiki/Analysis_paralysis), so after some reading and suggestions I decided to just go with 
-[LazyVim](https://www.lazyvim.org/) to stop this paralysis
+The hardest part of adopting Neovim isn't learning modal editing or deciphering Lua-- 
+it's the overwhelming paralysis of choice. When three different plugins seemingly do the exact same job,
+and every forum thread argues passionately for a different one, it is absurdly easy to spiral into 
+[analysis paralysis](https://en.wikipedia.org/wiki/Analysis_paralysis). 
 
-But soon after using it, I realized that it is kind of.. bloated for my usecase.. lots of unnecessary UI sugar and plugins slowed down the
-editor multiple times during rust projects. So during my recent vacations, I decided to write my neovim configuration from scratch.
+To escape that loop and just get back to writing code, I took the shortcut everyone recommends:
+I installed [LazyVim](https://www.lazyvim.org/).
+
+<!-- more -->
+
+At first, it felt like magic. Everything worked out of the box. But over time, the cracks began to show. 
+
+LazyVim is an impressive piece of engineering, but it is essentially an entire Linux distribution
+disguised as a Neovim configuration. Between the UI sugar, background animations, 
+and dozens of plugins I never asked for, the editor began to stutter and lag right in the middle of my Rust projects. 
+
+I didn't move my workflow to the terminal just to run another bloated IDE. 
+During my recent break, I decided it was time to drop the pre-packaged distro, clear the slate,
+and write my own configuration from scratch—only keeping what I actually understand.
 
 So obviously, the first place to start would be to check Neovim's official site, and `:help` in nvim itself, but before that, we need to 
 clear the existing configs to get a clear state. Instead of just deleting everything at once, I discovered that nvim can have multiple
