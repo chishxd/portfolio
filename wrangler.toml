@@ -1,8 +1,9 @@
-name = "blog"
-compatibility_date = "2026-01-22"
+name = "chish-dev"
+compatibility_date = "2026-11-14"
 
 [build]
 command = "bash ./build.sh"
 
 [assets]
 directory = "./public"
+not_found_handling = "404-page"
