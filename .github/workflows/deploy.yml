@@ -51,7 +51,7 @@ jobs:
           zola --version
 
       - name: Build site for Neocities
-        run: zola build --base-url "https://YOUR-SITE.neocities.org"
+        run: zola build --base-url "https://chish.neocities.org/"
 
       - name: Deploy to Neocities
         uses: bcomnes/deploy-to-neocities@v3
