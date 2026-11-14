@@ -7,35 +7,39 @@ I'm Chish, a CS student who builds low-level things to understand them: a Chip-8
 
 <div data-marquee>
   <div>
-    <a href="https://quantinium.dev" target="_blank" rel="noopener"><img src="/buttons/quantinium.png" width="88" height="31" alt="Quantinium's site"></a>
-    <a href="https://fedoraproject.org" target="_blank" rel="noopener"><img src="/buttons/fedora.gif" width="88" height="31" alt="Fedora"></a>
-    <a href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener"><img src="/buttons/firefox.gif" width="88" height="31" alt="Firefox"></a>
-    <a href="https://www.rust-lang.org" target="_blank" rel="noopener"><img src="/buttons/rust.gif" width="88" height="31" alt="Rust"></a>
-    <a href="https://keepandroidopen.org/" target="_blank" rel="noopener"><img src="/buttons/keep-android-open.gif" width="88" height="31" alt="Rust"></a>
-    <a href="https://neovim.io" target="_blank" rel="noopener"><img src="/buttons/made-with-neovim.gif" width="88" height="31" alt="Made with Neovim"></a>
-    <a href="https://neocities.org" target="_blank" rel="noopener"><img src="/buttons/neocitiespink.gif" width="88" height="31" alt="Neocities"></a>
-    <a href="https://www.mobiusdigitalgames.com/outer-wilds.html" target="_blank" rel="noopener"><img src="/buttons/outer-wilds.gif" width="88" height="31" alt="Outer Wilds"></a>
-    <a href="https://github.com/chishxd" target="_blank" rel="noopener"><img src="/buttons/github-check.gif" width="88" height="31" alt="Check out my GitHub"></a>
-    <a href="https://www.daftpunk.com" target="_blank" rel="noopener"><img src="/buttons/daft-punk.gif" width="88" height="31" alt="Daft Punk"></a>
-    <a href="https://one-piece.com" target="_blank" rel="noopener"><img src="/buttons/one-piece.jpg" width="88" height="31" alt="One Piece"></a>
-    <a href="https://www.reddit.com/r/FuckMicrosoft/" target="_blank" rel="noopener"><img src="/buttons/hatems.gif" width="88" height="31" alt="Hatems"></a>
-    <a href="TODO-human" target="_blank" rel="noopener"><img src="/buttons/human.png" width="88" height="31" alt="Made by a human"></a>
-    <a href="https://kernel.org/" target="_blank" rel="noopener"><img src="/buttons/linuxnow.jpg" width="88" height="31" alt="Linux Now"></a>
-  </div>
-  <div aria-hidden="true">
-    <a tabindex="-1" href="https://quantinium.dev" target="_blank" rel="noopener"><img src="/buttons/quantinium.png" width="88" height="31" alt=""></a>
-    <a tabindex="-1" href="https://fedoraproject.org" target="_blank" rel="noopener"><img src="/buttons/fedora.gif" width="88" height="31" alt=""></a>
-    <a tabindex="-1" href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener"><img src="/buttons/firefox.gif" width="88" height="31" alt=""></a>
-    <a tabindex="-1" href="https://www.rust-lang.org" target="_blank" rel="noopener"><img src="/buttons/rust.gif" width="88" height="31" alt=""></a>
-    <a tabindex="-1" href="https://neovim.io" target="_blank" rel="noopener"><img src="/buttons/made-with-neovim.gif" width="88" height="31" alt=""></a>
-    <a tabindex="-1" href="https://neocities.org" target="_blank" rel="noopener"><img src="/buttons/neocitiespink.gif" width="88" height="31" alt=""></a>
-    <a tabindex="-1" href="https://www.mobiusdigitalgames.com/outer-wilds.html" target="_blank" rel="noopener"><img src="/buttons/outer-wilds.gif" width="88" height="31" alt=""></a>
-    <a tabindex="-1" href="https://github.com/chishxd" target="_blank" rel="noopener"><img src="/buttons/github-check.gif" width="88" height="31" alt=""></a>
-    <a tabindex="-1" href="https://www.daftpunk.com" target="_blank" rel="noopener"><img src="/buttons/daft-punk.gif" width="88" height="31" alt=""></a>
-    <a tabindex="-1" href="https://one-piece.com" target="_blank" rel="noopener"><img src="/buttons/one-piece.jpg" width="88" height="31" alt=""></a>
-    <a href="https://www.reddit.com/r/FuckMicrosoft/" target="_blank" rel="noopener"><img src="/buttons/hatems.gif" width="88" height="31" alt="Hatems"></a>
-    <a href="TODO-human" target="_blank" rel="noopener"><img src="/buttons/human.png" width="88" height="31" alt="Made by a human"></a>
-    <a href="https://kernel.org/" target="_blank" rel="noopener"><img src="/buttons/linuxnow.jpg" width="88" height="31" alt="Linux Now"></a>
+      <div>
+        <a href="https://chish.dev" target="_blank" rel="noopener"><img src="/buttons/quantinium.png" width="88" height="31" alt="Quantinium's site"></a>
+        <a href="https://quantinium.dev" target="_blank" rel="noopener"><img src="/buttons/quantinium.png" width="88" height="31" alt="Quantinium's site"></a>
+        <a href="https://fedoraproject.org" target="_blank" rel="noopener"><img src="/buttons/fedora.gif" width="88" height="31" alt="Fedora"></a>
+        <a href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener"><img src="/buttons/firefox.gif" width="88" height="31" alt="Firefox"></a>
+        <a href="https://www.rust-lang.org" target="_blank" rel="noopener"><img src="/buttons/rust.gif" width="88" height="31" alt="Rust"></a>
+        <a href="https://keepandroidopen.org/" target="_blank" rel="noopener"><img src="/buttons/keep-android-open.gif" width="88" height="31" alt="Rust"></a>
+        <a href="https://neovim.io" target="_blank" rel="noopener"><img src="/buttons/made-with-neovim.gif" width="88" height="31" alt="Made with Neovim"></a>
+        <a href="https://neocities.org" target="_blank" rel="noopener"><img src="/buttons/neocitiespink.gif" width="88" height="31" alt="Neocities"></a>
+        <a href="https://www.mobiusdigitalgames.com/outer-wilds.html" target="_blank" rel="noopener"><img src="/buttons/outer-wilds.gif" width="88" height="31" alt="Outer Wilds"></a>
+        <a href="https://github.com/chishxd" target="_blank" rel="noopener"><img src="/buttons/github-check.gif" width="88" height="31" alt="Check out my GitHub"></a>
+        <a href="https://www.daftpunk.com" target="_blank" rel="noopener"><img src="/buttons/daft-punk.gif" width="88" height="31" alt="Daft Punk"></a>
+        <a href="https://one-piece.com" target="_blank" rel="noopener"><img src="/buttons/one-piece.jpg" width="88" height="31" alt="One Piece"></a>
+        <a href="https://www.reddit.com/r/FuckMicrosoft/" target="_blank" rel="noopener"><img src="/buttons/hatems.gif" width="88" height="31" alt="Hatems"></a>
+        <a href="TODO-human" target="_blank" rel="noopener"><img src="/buttons/human.png" width="88" height="31" alt="Made by a human"></a>
+        <a href="TODO-discord" target="_blank" rel="noopener"><img src="/buttons/discord.png" width="88" height="31" alt="Discord"></a>
+        <a href="https://kernel.org/" target="_blank" rel="noopener"><img src="/buttons/linuxnow.jpg" width="88" height="31" alt="Linux Now"></a>
+      </div>
+      <div aria-hidden="true">
+        <a tabindex="-1" href="https://quantinium.dev" target="_blank" rel="noopener"><img src="/buttons/quantinium.png" width="88" height="31" alt=""></a>
+        <a tabindex="-1" href="https://fedoraproject.org" target="_blank" rel="noopener"><img src="/buttons/fedora.gif" width="88" height="31" alt=""></a>
+        <a tabindex="-1" href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener"><img src="/buttons/firefox.gif" width="88" height="31" alt=""></a>
+        <a tabindex="-1" href="https://www.rust-lang.org" target="_blank" rel="noopener"><img src="/buttons/rust.gif" width="88" height="31" alt=""></a>
+        <a tabindex="-1" href="https://neovim.io" target="_blank" rel="noopener"><img src="/buttons/made-with-neovim.gif" width="88" height="31" alt=""></a>
+        <a tabindex="-1" href="https://neocities.org" target="_blank" rel="noopener"><img src="/buttons/neocitiespink.gif" width="88" height="31" alt=""></a>
+        <a tabindex="-1" href="https://www.mobiusdigitalgames.com/outer-wilds.html" target="_blank" rel="noopener"><img src="/buttons/outer-wilds.gif" width="88" height="31" alt=""></a>
+        <a tabindex="-1" href="https://github.com/chishxd" target="_blank" rel="noopener"><img src="/buttons/github-check.gif" width="88" height="31" alt=""></a>
+        <a tabindex="-1" href="https://www.daftpunk.com" target="_blank" rel="noopener"><img src="/buttons/daft-punk.gif" width="88" height="31" alt=""></a>
+        <a tabindex="-1" href="https://one-piece.com" target="_blank" rel="noopener"><img src="/buttons/one-piece.jpg" width="88" height="31" alt=""></a>
+        <a href="https://www.reddit.com/r/FuckMicrosoft/" target="_blank" rel="noopener"><img src="/buttons/hatems.gif" width="88" height="31" alt="Hatems"></a>
+        <a href="TODO-human" target="_blank" rel="noopener"><img src="/buttons/human.png" width="88" height="31" alt="Made by a human"></a>
+        <a href="https://kernel.org/" target="_blank" rel="noopener"><img src="/buttons/linuxnow.jpg" width="88" height="31" alt="Linux Now"></a>
+      </div>
   </div>
 </div>
 
