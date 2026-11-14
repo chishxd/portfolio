@@ -23,7 +23,7 @@
   </main>
 <footer>
   {% for s in config.extra.socials %}
-  <a rel="me" href="{{ s.url }}" title="{{ s.name }}"><img src="{{ get_url(path='icons/' ~ s.icon) }}" alt="{{ s.name }}"></a>
+  <a rel="me" href="{{ s.url }}">{{s.name}}</a>
   {% endfor %}
 </footer>
 </body>

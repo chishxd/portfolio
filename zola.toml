@@ -34,10 +34,10 @@ theme = "github-dark"
 [extra]
 # Put your custom variables here
 socials = [
-  { name = "GitHub", url = "https://github.com/chishxd", icon = "github.svg" },
-  { name = "Codeberg", url = "https://codeberg.org/chish", icon = "codeberg.svg" },
-  { name = "Bluesky", url = "https://bsky.app/profile/chishxd.bsky.social", icon = "bluesky.svg" },
-  { name = "Discord", url = "https://discord.com/users/chishxd", icon = "discord.svg" },
-  { name = "X/Twitter", url = "https://x.com/ChishGG", icon = "x.svg" },
+  { name = "GitHub", url = "https://github.com/chishxd" },
+  { name = "Codeberg", url = "https://codeberg.org/chish"},
+  { name = "Bluesky", url = "https://bsky.app/profile/chishxd.bsky.social"},
+  { name = "Discord", url = "https://discord.com/users/chishxd"},
+  { name = "X/Twitter", url = "https://x.com/ChishGG"},
 ]
 # RSS feed configuration
