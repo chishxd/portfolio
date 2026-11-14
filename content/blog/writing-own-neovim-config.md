@@ -62,10 +62,10 @@ So the next thing I wanted with my neovim was to make it look good, so I install
 and added some config
 ```lua 
 vim.pack.add({
-    ....
-	-- gruvbox theme
-	"https://github.com/sainnhe/gruvbox-material",
-    ....
+  ....
+  -- gruvbox theme
+  "https://github.com/sainnhe/gruvbox-material",
+  ....
 })
 
 vim.o.background = "dark"
@@ -105,26 +105,32 @@ The final LSP setup consists of some LSP options:
 
 ```lua
 vim.lsp.config("lua_ls", {
-	settings = {
-		Lua = {
-			runtime = { version = "LuaJIT" },
-			diagnostics = { globals = { "vim" } },
-			workspace = { library = { vim.env.VIMRUNTIME } },
-		},
-	},
+  settings = {
+    Lua = {
+      runtime     = { version = "LuaJIT" },
+      diagnostics = { globals = { "vim" } },
+      workspace   = { library = { vim.env.VIMRUNTIME } },
+      format      = {
+        enable = true,
+        defaultConfig = {
+          indent_size = "2", -- Lua convention; use "4" if you really want 4
+        },
+      },
+    },
+  },
 })
 
 vim.lsp.config("rust_analyzer", {
-	settings = { ["rust-analyzer"] = { check = { command = "clippy" } } },
+  settings = { ["rust-analyzer"] = { check = { command = "clippy" } } },
 })
 
 vim.lsp.config("zls", {
-	settings = {
-		zls = {
-			enable_build_on_save = true,
-			-- build_on_save_step = "check", -- optional: if your build.zig defines a "check" step
-		},
-	},
+  settings = {
+    zls = {
+      enable_build_on_save = true,
+      -- build_on_save_step = "check", -- optional: if your build.zig defines a "check" step
+    },
+  },
 })
 
 vim.lsp.enable({ "rust_analyzer", "clangd", "zls", "lua_ls" })
@@ -165,34 +171,34 @@ Simply deleting that setup block did the job.
 Finally, these are the plugins I have installed in my neovim right now.
 ```lua
 vim.pack.add({
-	-- Quickstart configs for LSP
-	'https://github.com/neovim/nvim-lspconfig',
-	-- Fuzzy picker
-	'https://github.com/ibhagwan/fzf-lua',
-	-- Autocompletion
-	'https://github.com/nvim-mini/mini.completion',
-	-- Enhanced quickfix/loclist
-	'https://github.com/stevearc/quicker.nvim',
-	-- Git integration
-	'https://github.com/lewis6991/gitsigns.nvim',
-	-- gruvbox theme
-	"https://github.com/sainnhe/gruvbox-material",
-	-- the wakatime for hackatime
-	"https://github.com/wakatime/vim-wakatime",
-	-- lualine
-	'https://github.com/nvim-tree/nvim-web-devicons',
-	'https://github.com/nvim-lualine/lualine.nvim',
-	-- which-key for info
-	"https://github.com/folke/which-key.nvim",
-	--to automatically end starting parenthesis with ending one
-	"https://github.com/nvim-mini/mini.pairs",
-	-- to add surrounding brackets when needed
-	"https://github.com/nvim-mini/mini.surround",
-	-- for diff:
-	'https://github.com/sindrets/diffview.nvim',
-	-- zig stuff
-	'https://codeberg.org/ziglang/zig.vim',
-	"https://github.com/nvim-treesitter/nvim-treesitter",
+  -- Quickstart configs for LSP
+  'https://github.com/neovim/nvim-lspconfig',
+  -- Fuzzy picker
+  'https://github.com/ibhagwan/fzf-lua',
+  -- Autocompletion
+  'https://github.com/nvim-mini/mini.completion',
+  -- Enhanced quickfix/loclist
+  'https://github.com/stevearc/quicker.nvim',
+  -- Git integration
+  'https://github.com/lewis6991/gitsigns.nvim',
+  -- gruvbox theme
+  "https://github.com/sainnhe/gruvbox-material",
+  -- the wakatime for hackatime
+  "https://github.com/wakatime/vim-wakatime",
+  -- lualine
+  'https://github.com/nvim-tree/nvim-web-devicons',
+  'https://github.com/nvim-lualine/lualine.nvim',
+  -- which-key for info
+  "https://github.com/folke/which-key.nvim",
+  --to automatically end starting parenthesis with ending one
+  "https://github.com/nvim-mini/mini.pairs",
+  -- to add surrounding brackets when needed
+  "https://github.com/nvim-mini/mini.surround",
+  -- for diff:
+  'https://github.com/sindrets/diffview.nvim',
+  -- zig stuff
+  'https://codeberg.org/ziglang/zig.vim',
+  "https://github.com/nvim-treesitter/nvim-treesitter",
 })
 ```
 
