@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
+<small><a href="{{ get_url(path='@/blog/_index.md') }}">&larr; blog</a></small>
+
 <h1>Tags</h1>
 
 {% if terms %}

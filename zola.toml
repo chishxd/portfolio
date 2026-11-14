@@ -21,7 +21,6 @@ feed_limit = 20
 # per tag on its own; taxonomy_root puts them under /random/tags/ instead
 # of the default top-level /tags/.
 taxonomies = [{ name = "tags" }]
-taxonomy_root = "random"
 
 [markdown]
 insert_anchor_links = "left"

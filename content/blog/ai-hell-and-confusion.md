@@ -2,6 +2,8 @@
 title = "Escaping AI Tutorial Hell and Learning to Actually Think in Code"
 date = 2026-09-09
 description = "How I caught myself falling into AI tutorial hell, broke the habit to design structs and TUI layout math from scratch, and survived team Git merges."
+[taxonomies]
+tags = ["ai", "slop"]
 +++
 
 Me and two friends are building a regex parser and interactive TUI in Go for Hack Club -- basically regex101, but running directly inside the terminal using Bubble Tea.
