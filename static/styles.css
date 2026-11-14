@@ -80,17 +80,23 @@ footer a:hover { color: var(--strong); }
 .intro { display: flow-root; }
 .avatar { float: right; width: 96px; height: 96px; margin: 0 0 0.75rem 1.5rem; image-rendering: pixelated; }
 
-[data-marquee] { display: flex; overflow: hidden; margin: 1.5rem 0; }
+[data-marquee] { overflow: hidden; margin: 1.5rem 0; }
+
 [data-marquee] > div {
-  display: flex; flex-shrink: 0; gap: 0.5rem; padding-right: 0.5rem;
+  display: flex;
+  width: max-content;
   animation: marquee 40s linear infinite;
 }
 [data-marquee]:hover > div { animation-play-state: paused; }
-img[width="88"] { margin: 0; image-rendering: pixelated; }
 
-@keyframes marquee { to { transform: translateX(-100%); } }
+[data-marquee] > div > div { display: flex; flex: none; }
+[data-marquee] a { flex: none; margin-right: 0.5rem; }
+[data-marquee] img { max-width: none; margin: 0; image-rendering: pixelated; }
+
+@keyframes marquee { to { transform: translateX(-50%); } }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-marquee] > div { animation: none; flex-shrink: 1; flex-wrap: wrap; }
-  [data-marquee] > div[aria-hidden] { display: none; }
+  [data-marquee] > div { animation: none; width: auto; display: block; }
+  [data-marquee] > div > div { flex-wrap: wrap; }
+  [data-marquee] > div > div[aria-hidden] { display: none; }
 }
