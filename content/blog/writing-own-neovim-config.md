@@ -24,7 +24,9 @@ and dozens of plugins I never asked for, the editor began to stutter and lag rig
 
 I didn't move my workflow to the terminal just to run another bloated IDE. 
 During my recent break, I decided it was time to drop the pre-packaged distro, clear the slate,
-and write my own configuration from scratch—only keeping what I actually understand.
+and write my own configuration from scratch -- only keeping what I actually understand.
+
+## Moving out lazyvim configuration
 
 So obviously, the first place to start would be to check Neovim's official site, and `:help` in nvim itself, but before that, we need to 
 clear the existing configs to get a clear state. Instead of just deleting everything at once, I discovered that nvim can have multiple
@@ -43,6 +45,8 @@ mkdir ~/.config/nvim
 touch ~/.config/nvim/init.lua
 ```
 
+## Starting with clean slate
+
 Now, just typing `nvim` gives us the vanilla neovim with no modifications. With this new clean slate, we can start editing our
 `init.lua`. The [documentation](https://neovim.io/doc/user/nvim/#nvim) helped to get me started with what I wanted, more like a launchpad,
 neovim provides us with a example_init.lua, which comes prebaked in nvim's runtime directory, which can differ but is under env variable
@@ -54,6 +58,8 @@ named `$VIMRUNTIME`, so following commands let me get started with a basic examp
 :write ++p
 :restart
 ```
+
+## The New Package Manager
 
 After that restart, we have a kind of basic neovim configuration, which has some helpful plugins installed
 like lspconfig, gitsigns, fzf, etc.
@@ -87,6 +93,8 @@ vim.cmd.colorscheme("gruvbox-material")
 
 ```
 
+## The Statusline and some navigations
+
 This gave me a more pleasant looking UI... After that I just configured my the statusline wih lualine
 and installed wakatime for hack club's time tracking and added some personal keybinds for fzf-lua pickers 
 
@@ -107,6 +115,8 @@ And simple navigations ones too.. like shift + h, and shift + l move the cursor 
 vim.keymap.set({ 'n', 'v' }, 'H', '^')
 vim.keymap.set({ 'n', 'v' }, 'L', '$')
 ```
+
+## The "lightweight IDE" in lua
 
 Once I was done with making text editing QoL like I wanted it, my focus pivoted to getting some IDE-like features, with LSP
 and treesitter. I thought LSPs and treesitter would be painful to setup-- But it was rather much easier than making my 
@@ -152,6 +162,8 @@ vim.lsp.inlay_hint.enable()
 
 And some autocmds for features like Code Action picker, quickfix list, etc.
 
+## Folds not Folding
+
 After writing some LSP code, I realized the folds were not working as they did on LazyVim.. turned out that Vim needed special
 expressions to be marked as folds... So I tried writing an autocmd, which kinda failed, as the LSP would take longer than the set options
 to start the fold. So, now without any autocmd, the fold techniques are directly plugged into global options as follows:
@@ -177,8 +189,8 @@ But after pasting that code, Neovim was just throwing lots of errors, and then a
 I realized that treesitter does not need any manual configuration block anymore and handles everything out-of-the-box
 Simply deleting that setup block did the job.
 
----
 
+## The Final collection of plugins
 
 Finally, these are the plugins I have installed in my neovim right now.
 ```lua
@@ -213,6 +225,8 @@ vim.pack.add({
   "https://github.com/nvim-treesitter/nvim-treesitter",
 })
 ```
+
+## Conclusion
 
 The entire configuration is now a single 350 lines of lua code now. Which feels more snappier
 and feels more intuitive to my usecase, rather than something built for a more generic approach,
