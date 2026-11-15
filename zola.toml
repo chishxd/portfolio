@@ -11,6 +11,7 @@ compile_sass = false
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
+# RSS feed configuration
 # Generate RSS feed
 generate_feeds = true
 feed_filenames = ["rss.xml"]
@@ -39,4 +40,10 @@ socials = [
   { name = "Discord", url = "https://discord.com/users/chishxd"},
   { name = "X/Twitter", url = "https://x.com/ChishGG"},
 ]
-# RSS feed configuration
+
+[[extra.webrings]]
+name = "IndieWeb"
+url = "https://xn--sr8hvo.ws"
+prev = "https://xn--sr8hvo.ws/previous"
+next = "https://xn--sr8hvo.ws/next"
+

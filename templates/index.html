@@ -9,10 +9,10 @@
   </div>
 </div>
 
-<hr>
 
 {% set blogs = get_section(path="blog/_index.md") %}
 {% if blogs.pages %}
+<hr>
 <h2>Recent posts</h2>
 <ul>
   {% for post in blogs.pages %}
@@ -27,10 +27,10 @@
 <p><a href="{{ blogs.permalink }}">all posts</a></p>
 {% endif %}
 
-<hr>
 
 {% set devlogs = get_section(path="devlogs/_index.md") %}
 {% if devlogs.subsections %}
+<hr>
 <h2>Recent devlogs</h2>
 <ul>
   {% for devlog_path in devlogs.subsections %}

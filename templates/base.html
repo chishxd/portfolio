@@ -32,10 +32,26 @@
     {% block parent %}{% endblock parent %}
     {% block content %}{% endblock content %}
   </main>
+
 <footer>
-  {% for s in config.extra.socials %}
-  <a rel="me" href="{{ s.url }}">{{s.name}}</a>
-  {% endfor %}
+  <div class="footer-row">
+    {% for s in config.extra.socials %}
+    <a rel="me" href="{{ s.url }}">{{ s.name }}</a>
+    {% endfor %}
+  </div>
+
+  {% if config.extra.webrings %}
+  <div class="footer-row">
+    {% for ring in config.extra.webrings %}
+    <span class="webring">
+      <a href="{{ ring.prev }}" rel="prev">&larr;</a>
+      <a href="{{ ring.url }}">{{ ring.name }}</a>
+      <a href="{{ ring.next }}" rel="next">&rarr;</a>
+    </span>
+    {% endfor %}
+  </div>
+  {% endif %}
 </footer>
+
 </body>
 </html>
