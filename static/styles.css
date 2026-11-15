@@ -49,7 +49,7 @@ nav a { color: var(--muted); text-decoration: none; }
 nav > a { color: var(--strong); font-weight: 700; }
 nav a:hover { color: var(--strong); }
 
-/* "← blog" back link: quiet, underlined on hover only */
+/* "<- blog" back link: quiet, underlined on hover only */
 main > small:first-child { display: block; margin-bottom: 1.5rem; }
 main > small:first-child a { color: var(--muted); text-decoration: none; }
 main > small:first-child a:hover { color: var(--accent); text-decoration: underline; }
@@ -76,10 +76,11 @@ footer a:hover { color: var(--strong); }
 
 :focus-visible { outline: 2px solid var(--muted); outline-offset: 3px; }
 
-/* homepage avatar: delete these two lines if you don't use it */
+/* My PFP */
 .intro { display: flow-root; }
 .avatar { float: right; width: 96px; height: 96px; margin: 0 0 0.75rem 1.5rem; image-rendering: pixelated; }
 
+/* Marquee Stuff */
 [data-marquee] { overflow: hidden; margin: 1.5rem 0; }
 
 [data-marquee] > div {
@@ -101,14 +102,10 @@ footer a:hover { color: var(--strong); }
   [data-marquee] > div > div[aria-hidden] { display: none; }
 }
 
-.post-card {
-  margin-bottom: 2.5rem;
-}
+/* trying out some stuff with (READ MORE) thingy*/
+.post-card { margin-bottom: 2.5rem;}
 
-.post-meta {
-  margin-top: -0.5rem;
-  margin-bottom: 1rem;
-}
+.post-meta { margin-top: -0.5rem; margin-bottom: 1rem; }
 
 .continue-reading {
   margin-top: 1rem;
@@ -116,15 +113,8 @@ footer a:hover { color: var(--strong); }
   font-size: 0.85rem;
 }
 
-.continue-reading a {
-  color: var(--accent);
-  text-decoration: none;
-}
+.continue-reading a { color: var(--accent); text-decoration: none; }
 
-.continue-reading a:hover {
-  text-decoration: underline;
-}
+.continue-reading a:hover { text-decoration: underline; }
 
-.post-divider {
-  margin: 2.5rem 0;
-}
+.post-divider { margin: 2.5rem 0; }

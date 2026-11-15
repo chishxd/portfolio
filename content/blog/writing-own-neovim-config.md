@@ -3,7 +3,7 @@ title = "How I dropped LazyVim and wrote my own configuration from scratch"
 date = "2026-11-14"
 description = "A guide and devlog about how I wrote my neovim configurations"
 [taxonomies]
-tags = ["neovim", "terminal", "config"]
+tags = ["vim", "terminal", "editors"]
 +++
 
 The hardest part of adopting Neovim isn't learning modal editing or deciphering Lua-- 
@@ -95,7 +95,7 @@ vim.cmd.colorscheme("gruvbox-material")
 
 ## The Statusline and some navigations
 
-This gave me a more pleasant looking UI... After that I just configured my the statusline wih lualine
+This gave me a more pleasant looking UI... After that I just configured my the statusline with lualine
 and installed wakatime for hack club's time tracking and added some personal keybinds for fzf-lua pickers 
 
 ```lua
@@ -228,7 +228,7 @@ vim.pack.add({
 
 ## Conclusion
 
-The entire configuration is now a single 350 lines of lua code now. Which feels more snappier
+The entire configuration is now a single 350 lines of lua code. Which feels snappier
 and feels more intuitive to my usecase, rather than something built for a more generic approach,
 the venture gave me a fun sidequest and understanding of how nvim works.. I love the community and documentation
 for neovim VERY much, I wish to contribute to the editor sometime soon <3
