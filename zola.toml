@@ -3,7 +3,7 @@ base_url = "https://chish.dev"
 
 # Site title and description
 title = "Chish"
-description = "Chish's blog, guides, and devlogs"
+description = "CS student writing Zig and Rust, breaking Linux servers, and writing down how things actually work under the hood."
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false

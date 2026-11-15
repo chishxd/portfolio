@@ -5,7 +5,8 @@
   <img class="u-photo avatar" src="{{ get_url(path='sans.jpg') }}" alt="Chish">
   <div class="intro-text">
     <a class="p-name u-url" rel="me" href="{{ config.base_url }}" hidden>Chish</a>
-    <div class="p-note">{{ section.content | safe }}</div>
+    <span class="p-note" hidden>{{ config.description }}</span>
+    <div>{{ section.content | safe }}</div>
   </div>
 </div>
 
