@@ -9,6 +9,7 @@ I'm Chish, a CS student who builds low-level things to understand them: a Chip-8
   <div>
       <div>
         <a href="https://chish.dev" target="_blank" rel="noopener"><img src="/buttons/chish_88x31.png" width="88" height="31" alt="My personal site!"></a>
+        <a href="https://harshmap.neocities.org/" target="_blank" rel="noopener"><img src="/buttons/button_harsha.png" width="88" height="31" alt="My personal site!"></a>
         <a href="https://quantinium.dev" target="_blank" rel="noopener"><img src="/buttons/quantinium.png" width="88" height="31" alt="Quantinium's site"></a>
         <a href="https://fedoraproject.org" target="_blank" rel="noopener"><img src="/buttons/fedora.gif" width="88" height="31" alt="Fedora"></a>
         <a href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener"><img src="/buttons/firefox.gif" width="88" height="31" alt="Firefox"></a>
@@ -26,6 +27,8 @@ I'm Chish, a CS student who builds low-level things to understand them: a Chip-8
         <a href="https://kernel.org/" target="_blank" rel="noopener"><img src="/buttons/linuxnow.jpg" width="88" height="31" alt="Linux Now"></a>
       </div>
       <div aria-hidden="true">
+        <a href="https://chish.dev" target="_blank" rel="noopener"><img src="/buttons/chish_88x31.png" width="88" height="31" alt="My personal site!"></a>
+        <a href="https://harshmap.neocities.org/" target="_blank" rel="noopener"><img src="/buttons/button_harsha.png" width="88" height="31" alt="My personal site!"></a>
         <a tabindex="-1" href="https://quantinium.dev" target="_blank" rel="noopener"><img src="/buttons/quantinium.png" width="88" height="31" alt=""></a>
         <a tabindex="-1" href="https://fedoraproject.org" target="_blank" rel="noopener"><img src="/buttons/fedora.gif" width="88" height="31" alt=""></a>
         <a tabindex="-1" href="https://www.mozilla.org/firefox/" target="_blank" rel="noopener"><img src="/buttons/firefox.gif" width="88" height="31" alt=""></a>
